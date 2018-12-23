@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<!-- Họ tên: <input id="FullNameId" class="FullNameClass" type="text" name="" value="">
+	<span id="content">
+		
+	</span>
+	<input type="button" name="" value="Đổ dữ liệu" onclick="filldata()"> -->
+	<!-- <img width="280px" height="350px" src="../Lession 01/DA2wnQhXYAQO__F.jpg" onmouseover="increase()" onmouseout="decrease()">
+	<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua.</span>
+	
+	<input id="txt" type="text" name="" value="" placeholder="" onfocus="change()" onblur="reset()">
+	<input type="button" name="" value="Tăng" onclick="increase()">
+	<input type="button" name="" value="Giảm" onclick="decrease()"> -->
+
+	Giá: <span>2.000.000 VNĐ</span>
+	<select id="opt">
+		<option value="1">Black</option>
+		<option value="2">Red</option>
+		<option value="3">White</option>
+	</select>
+	<!-- <input id="txt" type="text" name=""> -->
+	<script type="text/javascript">
+		/*function filldata(){*/
+			//id
+/*			var fullname = document.getElementById("FullNameId");//gọi đối tượng cần thay đổi
+fullname.value = " Nguyễn Bá Tình";//thay đổi thuộc tính của đối tượng*/
+			//tagname
+			/*var fullname = document.getElementsByTagName("input");//gọi đối tượng cần thay đổi
+			fullname[0].value = " Nguyễn Bá Tình";//thay đổi thuộc tính của đối tượng*/
+			//class
+			/*var fullname = document.getElementsByClassName("FullNameClass");//gọi đối tượng cần thay đổi
+			fullname[0].value = " Nguyễn Bá Tình";//thay đổi thuộc tính của đối tượng*/
+			/*var content = document.getElementById("content");
+			content.innerHTML = "Nguyễn Bá Tình";
+			content.style.color="orange";
+			content.style.border="1px solid red";
+			content.style.fontWeight = "900";
+			content.style.fontSize = "30px";*/
+
+
+			/*}*/
+		//tăng
+
+		/*function increase(){
+			var img = document.getElementsByTagName("img")[0];
+
+			var width = img.width;
+			var height = img.height;
+
+			img.width = width * 1.2;
+			img.height = height *1.2;
+
+			img.style.opacity = '0.5';//làm mờ
+		}*/
+		//giảm
+		/*function decrease(){
+			var img = document.getElementsByTagName("img")[0];
+
+			var width = img.width;
+			var height = img.height;
+
+			img.width = width / 1.2;
+			img.height = height / 1.2;
+
+			img.style.opacity = '1';//làm mờ
+		}*/
+
+		/*function change(){
+			var txt = document.getElementById("txt");
+			txt.style.background = "orange";
+		}
+		function reset(){
+			var txt = document.getElementById("txt");
+			txt.style.background = "white";
+		}
+*/
+		var opt = document.getElementById("opt");//gọi đối tượng
+		opt.addEventListener("change", change);//onchange cho đối tượng
+		function change(){
+			var gia = document.getElementsByTagName("span")[0];
+			var opt = document.getElementById("opt");
+			opt.style.background = "orange";
+
+			if (opt.value=="1") {
+				gia.innerHTML = "2.000.000 VNĐ";
+			}
+			if (opt.value=="2") {
+				gia.innerHTML = "4.000.000 VNĐ";
+			}
+			if (opt.value=="3") {
+				gia.innerHTML = "6.000.000 VNĐ";
+			}
+		}
+
+		/*var txt = document.getElementById("txt");
+		txt.addEventListener("change", change);
+		txt.addEventListener("focus", reset);*/
+
+	</script>
+</body>
+</html>

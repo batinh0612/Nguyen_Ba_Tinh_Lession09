@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+	#div{
+		width: 24%;
+		height: 80px;
+		border: 1px solid black;
+	}
+	.left{
+		float: left;
+		list-style: none;
+		padding-left: 5%;
+	}
+	span{
+		margin-left: 5%;
+		font-size: 18px;
+	}
+</style>
+</head>
+<body>
+	<div id="div">
+		<span>Cỡ chữ</span>
+		<ul>
+			<li class="left"><input onclick="macdinh()" type="button" name="" value="Mặc định"></li>
+			<li class="left"><input onclick="tang()" type="button" name="" value="Lớn"></li>
+			<li class="left"><input onclick="giam()" type="button" name="" value="Nhỏ"></li>
+		</ul>
+	</div>
+	<p id="lorem" >Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat.</p>
+	<script type="text/javascript">
+
+		var font = 0;
+
+		function macdinh() {
+			document.getElementById('lorem').style.fontSize="100%";
+		}
+
+		function tang() {
+			font = font + 40;
+			document.getElementById('lorem').style.fontSize=(font + 100) + "%";
+		}
+
+		function giam() {
+			font = font - 40;
+			document.getElementById('lorem').style.fontSize=(font + 100) + "%";
+		}
+	</script>
+</body>
+</html>

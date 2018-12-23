@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="vi">
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			#content {
+				width: 45%;
+				background: #E4E0E0;
+				margin: 0 auto;
+			}
+			.element {
+				height: 53px;
+				border: 1px solid grey;
+			}
+			.element input {
+				margin: 20px;
+				background: green;
+				border: 1px solid black;
+			}
+			.left{
+				float: left;
+				list-style: none;
+				padding-left: 2%;
+				padding-top: 10px;
+			}
+			.check{
+				width: 9%;
+				border-right: 1px solid gray;
+			}
+			.float-left{
+				list-style: none;
+				float: left;
+
+			}
+			span {
+				padding-left: 4%;
+				padding-top: 15px;
+			}
+			li {
+				cursor: pointer;
+			}
+		</style>
+		<script type="text/javascript">
+			function CheckAll() {
+				for(var i = 0; i < document.getElementsByTagName("input").length; i++) {
+					document.getElementsByTagName("input")[i].checked=true;
+				}
+			}
+
+			function UnCheckAll() {
+				for(var i = 0; i < document.getElementsByTagName("input").length; i++) {
+					document.getElementsByTagName("input")[i].checked=false;
+				}
+			}
+
+			/*function over() {
+				var obj = document.getElementsByClassName("element");
+				for (var i = 0; i < document.getElementsByClassName("element").length; i++) {
+					if (obj[i]==true) {
+						obj[i].style.background="#7BED6D";
+					}
+				}
+			}	
+
+			function out() {
+				var obj = document.getElementsByClassName("element");
+				for (var i = 0; i < document.getElementsByClassName("element").length; i++) {
+					obj[i].style.background="#E4E0E0";
+				}
+			}*/
+
+			function over(obj) {
+				obj.style.background="#7BED6D";
+			}	
+
+			function out(obj) {
+				obj.style.background="";
+			}
+
+		</script>
+	</head>
+	<body>
+		<div id="content">
+			<form>
+				<div class="element" onmouseover="over(this)" onmouseout="out(this)">
+					<div class="check float-left">
+						<input type="checkbox" name="check">
+					</div>
+					<span class="float-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+				</div>
+				<div class="element" onmouseover="over(this)" onmouseout="out(this)">
+					<div class="check float-left">
+						<input type="checkbox" name="check">
+					</div>
+					<span class="float-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+				</div>
+				<div class="element" onmouseover="over(this)" onmouseout="out(this)">
+					<div class="check float-left">
+						<input type="checkbox" name="check">
+					</div>
+					<span class="float-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+				</div>
+				<div class="element" onmouseover="over(this)" onmouseout="out(this)">
+					<div class="check float-left">
+						<input type="checkbox" name="check">
+					</div>
+					<span class="float-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+				</div>
+				<div class="element" onmouseover="over(this)" onmouseout="out(this)">
+					<div class="check float-left">
+						<input type="checkbox" name="check">
+					</div>
+					<span class="float-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+				</div>
+				<div class="element" onmouseover="over(this)" onmouseout="out(this)">
+					<div class="check float-left">
+						<input type="checkbox" name="check">
+					</div>
+					<span class="float-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+				</div>
+				<div class="element" onmouseover="over(this)" onmouseout="out(this)">
+					<div class="check float-left">
+						<input type="checkbox" name="check">
+					</div>
+					<span class="float-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+				</div>
+				<div class="element" onmouseover="over(this)" onmouseout="out(this)">
+					<div class="check float-left">
+						<input type="checkbox" name="check">
+					</div>
+					<span class="float-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+				</div>
+			</form>
+			<div>
+				<ul>
+					<li class="left"><p onclick="CheckAll()" id="CheckAll"><u><font color="blue">Check All</font></u></p></li>
+					<li class="left"><p onclick="UnCheckAll()" id="unCheckAll"><u><font color="blue">Uncheck All</font></u></p></li>
+				</ul>
+			</div>
+		</div>
+	</body>
+</html>
